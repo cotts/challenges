@@ -1,0 +1,45 @@
+
+#app{
+  font-family: 'Ubuntu', sans-serif;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.txt {
+  border: 1px solid #2c3e50;
+  border-radius: 5px;
+  width: 300px;
+  font-size: 18px;
+  border-style:solid;
+  padding: 7px;
+  margin: 10px;
+  text-align: center;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background: #2c3e50;
+  color: #FFF;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.status-code{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+  opacity: 0;
+}

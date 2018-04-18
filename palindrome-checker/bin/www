@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+/* eslint consistent-return: "off", no-console: "off" */
+require('dotenv').config();
+const app = require('../src');
+
+const start = () => new Promise(async (resolve, reject) => {
+  try {
+    const instance = await app();
+
+    instance.listen(process.env.SERVER_PORT, (err) => {
+      if (err) return reject(err);
+      resolve(instance);
+    })
+      .on('error', reject);
+  } catch (err) {
+    reject(err);
+  }
+});
+
+start()
+  .then(() => console.info(`Palindrome Checker running on ${process.env.SERVER_PORT}`))
+  .catch((err) => {
+    console.error(`API Crashed: ${err}`);
+    process.exit(1);
+  });

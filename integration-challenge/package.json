@@ -1,0 +1,26 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "Challenge based on create a showcase with recommended products",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf public",
+    "build:public": "mkdir -p public && cd public && mkdir css && mkdir js",
+    "copy": "cp src/*.html public/",
+    "uglifyjs": "./node_modules/.bin/uglifyjs ./src/js/*.js > ./public/js/index.min.js",
+    "uglifycss": "./node_modules/.bin/uglifycss ./src/css/*.css > ./public/css/style.min.css",
+    "dist": "npm run clean && npm run build:public && npm run copy && npm run uglifyjs && npm run uglifycss",
+    "watch": "./node_modules/.bin/live-server ./src"
+  },
+  "author": "Thadeu Cotts <thadeu.cotts@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-es5": "^1.2.0",
+    "eslint-plugin-import": "^2.9.0",
+    "rimraf": "^2.6.2",
+    "uglify-js": "^3.3.15",
+    "uglifycss": "0.0.28"
+  }
+}

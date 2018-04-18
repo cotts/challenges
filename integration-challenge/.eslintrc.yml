@@ -1,0 +1,11 @@
+env:
+  browser: true
+plugins:
+  - es5
+extends: 'eslint:recommended'
+rules:
+  indent:
+    - error
+    - 2
+  no-unused-vars:
+    - off

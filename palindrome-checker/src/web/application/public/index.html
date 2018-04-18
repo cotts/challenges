@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Palindrome Checker</title>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <h1>{{ title }}</h1>
+      <input type="text" class="txt" v-model="checkText" placeholder="type here" required>
+      <button class="btn" @click="checker" :disabled="isDisabled">Check!</button>
+      <transition name="fade">
+      <p class="status-code" v-if="code">{{ code }}</p>
+    </transition>
+  </div>
+</body>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      title: 'Palindrome Checker',
+      checkText: '',
+      code: '',
+    },
+    methods: {
+      checker(){
+        this.code = '';
+        fetch(`http://localhost:3000/api/v1/check/${this.checkText}`)
+          .then(data => this.code = data.status);
+        this.checkText = '';
+      }
+    },
+    computed: {
+      isDisabled(){
+        return this.checkText === ''
+      }
+    }
+  })
+</script>
+</html>
