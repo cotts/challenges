@@ -1,9 +1,9 @@
 # Shopping cart with Vue.JS
 
 ## A shopping showcase with buy option using Vue
-  > Using Boostrap Vue  
-  > Vue Router  
-  > Vuex  
+  > Using Boostrap Vue
+  > Vue Router
+  > Vuex
 
 
 ## How to run this project
@@ -20,8 +20,8 @@ npm install
 
 3- Run the script to initialize the API and webview
 ```shell
-npm run serve
+npm run dev
 ```
 
-4- Access via browser  
+4- Access via browser
 http://localhost:8080/
