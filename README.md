@@ -1,5 +1,21 @@
 # Challenges For Job Openings
 
+## Frontend Intern Challenge
+`Company:` Chaordic Systems  
+ `Objectives:`
+
+* Create a url shortener
+* Use a Photoshop Layout File
+* Good Documentation  
+
+`Tecnologies used:`
+ - Javascript ES6
+ - SASS
+ - HTML5 
+ - Webpack  
+ - Husky  
+
+# 
 ## Integration-Challenge
 `Company:` Chaordic Systems  
  `Objectives:`
