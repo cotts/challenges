@@ -1,0 +1,38 @@
+.total-hits {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  background-color: $cor-fundo;
+
+  .efeito-borda {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid $cor-branca;
+  }
+
+  .total-hits-titulo {
+    @extend %cor-chaordic;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 1em;
+  }
+
+  .total-hits-contador {
+    @extend %cor-chaordic;
+    padding: 8px;
+    margin: 0 auto;
+    background-color: $cor-branca;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+  }
+
+  p {
+    color: $cor-apoio;
+    @extend %font-roboto-slab;
+    font-size: 0.8em;
+    margin-bottom: 50px;
+  }
+}

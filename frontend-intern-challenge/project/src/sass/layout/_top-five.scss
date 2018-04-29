@@ -1,0 +1,49 @@
+.top-five {
+  h2 {
+    @extend %cor-chaordic;
+    @extend %font-roboto-slab;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0;
+
+  }
+
+  .top-five-lista {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    max-width: 470px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    @extend %font-roboto-slab;
+
+    span {
+      width: 50%;
+    }
+
+    hr {
+      width: 100%;
+      opacity: 0.4;
+    }
+
+    .top-five-link {
+      @extend %cor-chaordic;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .top-five-hits {
+     text-align: right;
+     color: $cor-apoio;
+    }
+
+  }
+}
+
+@media (max-width: 400px) {
+  .top-five {
+    box-sizing: border-box;
+    padding: 10px;
+  }
+}

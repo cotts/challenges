@@ -1,0 +1,136 @@
+main {
+  background: url(../img/background-home.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  @extend %cor-branca;
+
+  h1 {
+    margin: 0;
+  }
+  p {
+    text-align: center;
+    max-width: 460px;
+    @extend %font-roboto;
+  }
+
+  .busca-form {
+    padding-top: 50px;
+    width: 450px;
+    @extend %cor-form;
+
+    hr {
+      width: 340px;
+      position: absolute;
+      border: 1px solid $cor-form;
+      margin: 0;
+      float: left;
+    }
+    .busca-form-texto {
+      z-index: 1;
+      width: 310px;
+      font-family: $font-roboto;
+      background-color: transparent;
+      border: transparent;
+      font-weight: bold;
+
+      padding-bottom: 0;
+      line-height: 2em;
+      &::placeholder {
+        @extend %cor-form;
+      }
+      &:focus {
+        border: transparent;
+        outline: none;
+
+      }
+    }
+
+    .busca-form-limpa {
+      border:1px solid transparent;
+      background-color: transparent;
+      position: relative;
+      cursor: pointer;
+      &:after {
+        content: "X";
+        width: 1em;
+        height: 1em;
+        z-index:2;
+        right: 35px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @extend %cor-branca;
+        font-weight: bold;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+
+    .busca-form-botao {
+      @extend %cor-branca;
+      float: right;
+      margin-right: 0;
+      font-family: $font-roboto;
+      font-weight: bold;
+      background-color: $cor-form;
+      padding: 10px;
+      width: 100px;
+      border: transparent;
+    }
+  }
+}
+
+.resultado {
+  @extend %cor-branca;
+}
+
+.visivel {
+  display: inline;
+}
+
+.oculto {
+  display: none;
+}
+
+.interaction {
+  animation: blink 1s;
+}
+
+.encurtar:after {
+  content : 'ENCURTAR';
+}
+
+.copiar:after {
+  content: 'COPIAR';
+  animation: blink 1s;
+}
+
+@keyframes blink {
+
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@media (max-width: 400px) {
+  main{
+    p {
+      width: 350px;
+    }
+  .busca-form {
+    max-width: 360px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    .busca-form-texto {
+      margin: 5px;
+      padding: 5px;
+      width: inherit;
+    }
+  }
+  }
+}
